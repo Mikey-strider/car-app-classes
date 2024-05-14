@@ -1,0 +1,30 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0px;
+  padding: 0px;
+  min-height: 100 vh;
+  display: grid;
+  grid-template-rows: "header";
+  grid-template-columns: 1fr, 2fr;
+  grid-template-areas: 
+  "header" "header" "header"
+  "main" "section" "section"
+  ;
+}
+
+header {
+  background-color: cornflowerblue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 10vh;
+  margin-bottom: 10px;
+}
+
+#main-car-form{
+  display: flex;
+  justify-content: center;
+}
