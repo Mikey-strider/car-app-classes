@@ -7,11 +7,13 @@ body {
   padding: 0px;
   min-height: 100 vh;
   display: grid;
-  grid-template-rows: "header";
-  grid-template-columns: 1fr, 2fr;
+  /* grid-template-rows: "header"; */
+  
+  grid-template-columns: auto 1fr auto;
+  grid-template-rows: 1fr 2fr;
   grid-template-areas: 
-  "header" "header" "header"
-  "main" "section" "section"
+  "header header header"
+  "main section section"
   ;
 }
 
@@ -22,9 +24,25 @@ header {
   justify-content: center;
   height: 10vh;
   margin-bottom: 10px;
+  grid-area: header;
+}
+
+ul {
+  list-style-type: none;
 }
 
 #main-car-form{
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+  grid-area: main;
+}
+
+#form-car-list{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  grid-area: section;
 }
